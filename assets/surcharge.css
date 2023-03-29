@@ -1,0 +1,17 @@
+/* Attribute 01: Titre des blocs de la homepage */
+h1 {
+  font-family: alternate-gothic-atf, sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  color: #000000; /* Noir */
+}
+
+
+/* produits */
+.product__title h1 { line-height: 1.2;}
+
+.price .price-item{
+    font-family: alternate-gothic-atf, sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+} 
