@@ -447,7 +447,13 @@
       </div>
     {%- endif -%}
   </div>
+  {% for block in section.blocks %}
+      {%- if block.type == 'tabs' -%}
+          {%  render 'product-tabs',  block: block, section: section, product: product  %}
+      {%  endif %}
+  {%  endfor %}
 
+  
   {% render 'product-media-modal' variant_images: variant_images %}
 
   {% assign popups = section.blocks | where: 'type', 'popup' %}
@@ -1714,7 +1720,7 @@
               "value": "bottle",
               "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
             },
-            {
+            { 
               "value": "box",
               "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
             },
@@ -1889,6 +1895,178 @@
           "default": "Heading",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "tabs",
+      "name": {
+        "fr": "Onglets",
+        "es": "Tabs",
+        "en": "Tabs"
+      },
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "titrecontenu",
+          "label": {
+            "fr": "Titre de la zone de contenu",
+            "es": "Título del área de contenido",
+            "en": "Main description tab title"
+          },
+          "default": {
+            "fr": "Description",
+            "es": "Descripción",
+            "en": "Description"
+          }
+        },
+        {
+          "type": "html",
+          "id": "textafterdescription",
+          "label": {
+            "fr": "Texte en dessous de la description",
+            "es": "Texto debajo de la Descripción",
+            "en": "Text below the description"
+          }
+        },
+        {
+          "type": "liquid",
+          "id": "liquidafterdescription",
+          "label": {
+            "fr": "Code Liquid en dessous de la description",
+            "es": "Code Liquid debajo de la Descripción",
+            "en": "Code Liquid below the description"
+          }
+        },
+        {
+          "type": "checkbox",
+          "id": "form2_active",
+          "label": {
+            "fr": "Affichier le formulaire secondaire",
+            "es": "Enable the 2nd form",
+            "en": "Enable the 2nd form"
+          },
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "titrezone2",
+          "label": {
+            "fr": "Titre de la zone 2",
+            "es": "Título de la zona 2",
+            "en": "Tab 2 title"
+          },
+          "default": {
+            "fr": "Livraison et retours",
+            "es": "Livraison et retours",
+            "en": "Delivery and return"
+          }
+        },
+        {
+          "type": "html",
+          "id": "textzone2",
+          "label": {
+            "fr": "Texte de la zone 2",
+            "es": "Título de la zona 2",
+            "en": "Tab 2 text"
+          },
+          "default": "<h2>Comment puis-je vérifier l'état de ma commande ?</h2>\n<p>Après qu'une commande ait été passée, elle est envoyée au plus vite à l'un de nos centres d'exécution, dans lequel votre article sera posté.<br>Vous pouvez nous contacter pendant les premières 48 heures pour un remboursement complet sans raisons particulières. <br>Sont disponibles ci-dessous les délais de livraison en fonction de votre localisation. </p>\n<h2>Quelles sont les temps d'expédition ?</h2>\n<p>Délai de livraison vers l'Europe : 2 à 3 semaines<br>Délai de livraison vers l'Amérique du Nord (Canada et États-Unis) : 3 à 4 semaines <br>Délai de livraison vers l'Afrique, l'Amérique du Sud et l'Asie: 3 à 5 semaines.</p>\n<h2>Comment passer une commande ?</h2>\n<p>Choisissez simplement vos articles dans le menu déroulant sur la page du produit et cliquez sur le bouton \"Acheter maintenant\", puis suivez les étapes pour compléter votre commande. Nous préparerons celle-ci et vous enverrons un émail de confirmation quand votre colis est envoyé !</p>\n<h2>Quelle méthode de paiement acceptez-vous?</h2>\n<p>Nous acceptons carte de crédit Visa et Mastercard. Vous pouvez aussi payer par Paypal.<br>Pour paiement avec une carte Aurore, Carte Bancaire, Maestro et autre carte de débit il faut faire le paiement en passant par Paypal même si vous n'avez pas de compte<br>Pour ce faire, vous n’avez qu’à sélectionner « Acheter avec Paypal » sur la page du panier d’Achat. Vous pourrez ensuite sélectionner « Payer par carte de crédit ou carte de débit Visa » sur la page suivante. Ensuite, vous entrez votre pays (France), et dans le type de carte, vous pourrez sélectionner votre carte<br><strong>N’hésitez pas à nous contacter si vous avez des questions!</strong></p>"
+        },
+        {
+          "type": "text",
+          "id": "titrezone3",
+          "label": {
+            "fr": "Titre de la zone 3",
+            "es": "Título de la zona 3",
+            "en": "Tab 3 title"
+          },
+          "default": {
+            "fr": "Pourquoi acheter chez nous ?",
+            "es": "¿Por qué comprar con nosotros?",
+            "en": "Why buy from us?"
+          }
+        },
+        {
+          "type": "html",
+          "id": "textzone3",
+          "label": {
+            "fr": "Texte de la zone 3",
+            "es": "Título de la zona 3",
+            "en": "Tab 3 text"
+          },
+          "default": "<h2>Pourquoi acheter chez nous ?</h2>\n<p>Car nous accordons un soin particulier au choix de nos produits.<br>\nIls doivent être innovants et d'une très bonne qualité.<br>\nNos articles sont testés et approuvés par notre service.<br>\nNous sommes des passionnés et nous mettons tout en oeuvre pour vous faire découvrir nos articles!</p>\n<h3>Quelques raisons pour lesquelles vous devriez acheter chez nous:</h3>\n<ul>\n<li>Commande en ligne 100% sécurisée</li>\n<li>Prix le plus bas en ligne</li>\n<li>Nouveaux produits, technologies de pointe et innovantes et des ventes spéciales pour nos précieux clients</li>\n<li>Soutien à la clientèle compétent et professionnel</li>\n<li>Des milliers de clients satisfaits</li>\n<li>Satisfait à 100% Garantie de remboursement.</li>\n<li>Tous les articles sont en stock et prêts à être expédiés lors de la commande</li>\n<li>La majorité des clients qui aiment nos produits reviennent pour des achats additionnels !</li>\n</ul>"
+        },
+        {
+          "type": "checkbox",
+          "id": "tab_reviews_enable",
+          "label": "Activer les avis",
+          "default": false
+        },   
+        {
+          "type": "text",
+          "id": "reviews_tabs_title",
+          "label": {
+            "fr": "Titre de l'onglet",
+            "es": "Título de la pestaña",
+            "en": "Tab title"
+          },
+          "default": {
+            "fr": "Avis",
+            "es": "Opiniones",
+            "en": "Reviews"
+          }
+        }, 
+        {
+          "type": "select",
+          "id": "reviews_tabs_apps",
+          "label": {
+            "fr": "Application d'avis",
+            "es": "Reviews apps",
+            "en": "Reviews apps"
+          },
+          "options": [
+            {
+              "value": "loox",
+              "label": "Loox"
+            },
+            {
+              "value": "ryviu",
+              "label": "Ryviu"
+            },
+            {
+              "value": "pr",
+              "label": "Product reviews"
+            },
+            {
+              "value": "alireviews",
+              "label": "Alireviews"
+            },
+            {
+              "value": "judgeme",
+              "label": "Judge me"
+            }
+          ]
+        },    
+        {
+          "type": "html",
+          "id": "reviews_html",
+          "label": "Code for reviews applications - HTML"  
+        },
+        {
+          "type": "liquid",
+          "id": "reviews_liquid",
+          "label": "Code for reviews applications - Liquid"      
+        },             
+        {
+          "type": "text",
+          "id": "class",
+          "label": "CSS Class"
+        },
+        {
+          "type": "text",
+          "id": "id",
+          "label": "CSS Id"
         }
       ]
     }

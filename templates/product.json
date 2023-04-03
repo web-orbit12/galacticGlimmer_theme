@@ -53,7 +53,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Materials",
-            "icon": "leather",
+            "icon": "leaf",
             "content": "",
             "page": ""
           }
@@ -90,6 +90,26 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "a37a204e-8b15-44cc-bed0-45534ec0a6c2": {
+          "type": "tabs",
+          "settings": {
+            "titrecontenu": "Description",
+            "textafterdescription": "",
+            "liquidafterdescription": "",
+            "form2_active": false,
+            "titrezone2": "Caractéristiques techniques et entretien",
+            "textzone2": "- Coupe regular - Graphisme sublimé - Lanière réglable - Logo sérigraphié - Col renforcé",
+            "titrezone3": "Vous aimerez aussi",
+            "textzone3": "<h2>Pourquoi acheter chez nous ?<\/h2>\n<p>Car nous accordons un soin particulier au choix de nos produits.<br>\nIls doivent être innovants et d'une très bonne qualité.<br>\nNos articles sont testés et approuvés par notre service.<br>\nNous sommes des passionnés et nous mettons tout en oeuvre pour vous faire découvrir nos articles!<\/p>\n<h3>Quelques raisons pour lesquelles vous devriez acheter chez nous:<\/h3>\n<ul>\n<li>Commande en ligne 100% sécurisée<\/li>\n<li>Prix le plus bas en ligne<\/li>\n<li>Nouveaux produits, technologies de pointe et innovantes et des ventes spéciales pour nos précieux clients<\/li>\n<li>Soutien à la clientèle compétent et professionnel<\/li>\n<li>Des milliers de clients satisfaits<\/li>\n<li>Satisfait à 100% Garantie de remboursement.<\/li>\n<li>Tous les articles sont en stock et prêts à être expédiés lors de la commande<\/li>\n<li>La majorité des clients qui aiment nos produits reviennent pour des achats additionnels !<\/li>\n<\/ul>",
+            "tab_reviews_enable": false,
+            "reviews_tabs_title": "Ils donnent leurs avis",
+            "reviews_tabs_apps": "loox",
+            "reviews_html": "",
+            "reviews_liquid": "",
+            "class": "",
+            "id": ""
+          }
         }
       },
       "block_order": [
@@ -105,7 +125,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "a37a204e-8b15-44cc-bed0-45534ec0a6c2"
       ],
       "settings": {
         "enable_sticky_info": true,
