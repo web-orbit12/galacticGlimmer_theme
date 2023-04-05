@@ -1,3 +1,5 @@
+* { font-family: alternate-gothic-atf,sans-serif;}
+
 /* Attribute 01: Titre des blocs de la homepage */
 h1 {
   font-family: alternate-gothic-atf, sans-serif;
@@ -19,6 +21,7 @@ header .list-menu__item {
 
 header .list-menu__item span {
     display: block; position: relative;
+    margin-top: 10px;
 }
 
 .header__menu-item:hover span { 
@@ -40,6 +43,47 @@ header .list-menu__item span {
   width: 100% !important;     transition: width .3s;
 }
 
+/* breadcrumbs */
+.breadcrumbs {
+  font-size: .85em;
+  margin: 0 0 2em;
+}
+
+.breadcrumbs ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+}
+
+.breadcrumbs a {
+  color: #5D5D5D;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.breadcrumbs li:not(:last-child):after {
+  content: "›\00a0";
+  display: inline-block;
+  padding-left: .75ch;
+  speak: none;
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: #0F0F0F;
+  font-family: alternate-gothic-atf;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.breadcrumbs [aria-current="page"]:hover,
+.breadcrumbs [aria-current="page"]:focus {
+  text-decoration: underline;
+}
+
 /* produits */
 .product__title h1 { line-height: 1.2;}
 
@@ -52,4 +96,56 @@ header .list-menu__item span {
 #description {
   font-size: 22px; font-family: alternate-gothic-atf, sans-serif; line-height: 28px;
   color: #000;
+}
+
+
+ .product-form__submit{
+    background: transparent;
+    border: 1px solid #0F0F0F;
+    color: #fff;
+    width: 441px;
+    height: 53px;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+    font-family: alternate-gothic-atf,sans-serif;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    transform: skew(-21deg);    
+}
+ .product-form__submit:before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    transition: .3s ease-out;
+    z-index: -1;
+}
+
+ .product-form__submit span {
+    display: inline-block;
+    transform: skew(21deg);
+    margin-right: 10px;
+}
+ .product-form__submit:hover  {
+    color: #0f0f0f;
+}
+ .product-form__submit:hover:before  {
+    background: transparent!important; width: 0%;
+}
+
+/* footer */
+footer h2 {
+    font-size: 30px !important;
+    line-height: 38px;
+    font-family: alternate-gothic-atf;
+    font-weight: 600;
+    margin: 0 0 25px;
+    color: #070707;
 }

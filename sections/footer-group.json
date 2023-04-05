@@ -5,43 +5,59 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "e404b2d9-6a11-40fe-b846-f984f184a0e7": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Mon Compte",
             "menu": "footer"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "A Propos",
+            "menu": "footer"
+          }
+        },
+        "9e212b70-aed4-40a2-b8cd-d38cbc61d686": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Aide",
             "menu": "footer"
           }
         },
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
+            "heading": "Contacts",
             "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
           }
         }
       },
       "block_order": [
+        "e404b2d9-6a11-40fe-b846-f984f184a0e7",
         "footer-0",
         "footer-1",
+        "9e212b70-aed4-40a2-b8cd-d38cbc61d686",
         "footer-2"
       ],
       "settings": {
         "color_scheme": "background-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "payment_enable": true,
+        "payment_enable": false,
         "show_policy": false,
-        "margin_top": 48,
+        "margin_top": 40,
         "padding_top": 36,
         "padding_bottom": 36
       }

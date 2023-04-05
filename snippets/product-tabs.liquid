@@ -4,11 +4,10 @@
     <button class="tablinks" onclick="openTab(event, 'zone3')">{{ block.settings.titrezone3 }}</button>
     <button class="tablinks" onclick="openTab(event, 'avis')">{{ block.settings.reviews_tabs_title }}</button>
 </div>
-
 <div class="tabcontainer">
     <div class="tab-inner page-width">
         <div id="description" class="tabcontent active">
-            <p>{{ product.description }}</p>
+          {{ product.description | replace: '<p><br></p>','' }}
         </div>
 
         <div id="zone2" class="tabcontent">
@@ -16,7 +15,7 @@
         </div>
 
         <div id="zone3" class="tabcontent">
-            <p>{{ block.settings.textzone3 }}</p>  
+            <p>{{ block.settings.textzone3 }}</p> 
         </div>
 
         <div id="avis" class="tabcontent">
