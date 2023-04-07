@@ -2319,7 +2319,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
     grid-template-areas:
       'heading icons'
       'navigation navigation';
-    grid-template-columns: 1fr auto;
   }
 
   .header--top-left.drawer-menu,
@@ -2331,8 +2330,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
   }
 
   .header--middle-left {
-    grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-areas:
+      'heading navigation icons';
     column-gap: 2rem;
   }
 
@@ -2701,6 +2700,7 @@ details[open] > .header__submenu {
 @media screen and (min-width: 990px) {
   .header__inline-menu {
     display: block;
+    margin: auto;
   }
 
   .header--top-center .header__inline-menu {

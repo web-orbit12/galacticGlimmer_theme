@@ -36,7 +36,7 @@
           "type": "text",
           "settings": {
             "heading": "Contacts",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "subtext": "<p>Besoin d’aide ? Contactez-nous:<\/p><p><\/p>"
           }
         }
       },
@@ -52,7 +52,7 @@
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
