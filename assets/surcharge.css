@@ -44,9 +44,13 @@ header .list-menu__item span {
 }
 
 /* breadcrumbs */
+.breadcrumbs-container {
+  border-bottom: .1rem solid rgba(var(--color-foreground),.08);
+} 
+
 .breadcrumbs {
   font-size: .85em;
-  margin: 0 0 2em;
+  margin: 2em auto;
 }
 
 .breadcrumbs ol {
