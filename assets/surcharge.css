@@ -149,3 +149,12 @@ footer h2 {
     margin: 0 0 25px;
     color: #070707;
 }
+
+footer .copyright__content {
+    font-family: alternate-gothic-atf;
+    font-size: 30px;
+    line-height: 38px;
+    color: #0f0f0f;
+    font-weight: 400;
+    letter-spacing: 0;
+}
