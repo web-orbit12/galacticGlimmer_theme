@@ -7,7 +7,7 @@
 <div class="tabcontainer">
     <div class="tab-inner page-width">
         <div id="description" class="tabcontent active">
-          {{ product.description | replace: '<p><br></p>','' }}
+          {{ product.description | replace: '<p><br></p>','' | remove: '<p><span style="font-size: 12px;"><br></span></p>' }}
         </div>
 
         <div id="zone2" class="tabcontent">
