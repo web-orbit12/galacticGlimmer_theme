@@ -144,6 +144,16 @@ header .list-menu__item span {
     background: transparent!important; width: 0%;
 }
 
+span.price-item.price-item--sale.price-item--last {
+  color: #DB5957;
+}
+
+.product-grid .card__content .card-information .price .price-item {
+  font-size: 29px !important;
+}
+
+.product-grid .card__badge { display: none;}
+
 /* footer */
 footer h2 {
     font-size: 30px !important;
