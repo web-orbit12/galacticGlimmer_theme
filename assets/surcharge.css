@@ -154,6 +154,26 @@ span.price-item.price-item--sale.price-item--last {
 
 .product-grid .card__badge { display: none;}
 
+.product__info-wrapper .red-label {
+  background: #DB5957;
+  opacity: 1;
+  width: max-content!important;
+  transform: skew(-21deg);
+  padding: 0 10px;
+}
+
+.product__info-wrapper .red-label p {
+  margin: 0;
+  text-align: center; text-transform: uppercase;
+  transform: skew(21deg);
+  font-size: 17px;
+  letter-spacing: 0px;
+  color: #fff;
+  font-family: alternate-gothic-atf,sans-serif;
+  padding: 8px 4px 3px;
+  line-height: 1.2;
+}
+
 /* footer */
 footer h2 {
     font-size: 30px !important;

@@ -66,6 +66,13 @@
         data-url="{{ product.url }}"
         class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
       >
+        {% if product.compare_at_price_max > product.price %}
+          <div class="label red-label">
+            <p>Remise {{ 100 | minus: product.price | times: 100 | divided_by: product.compare_at_price_max | round }}%</p>
+          </div>
+        {% endif %}
+        
+  
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {%- for block in section.blocks -%}
