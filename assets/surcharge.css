@@ -188,6 +188,37 @@ span.price-item.price-item--sale.price-item--last {
   font-size: 30px; font-weight: 700; color: #000; text-transform: capitalize;
 }
 
+.wishlist-button {
+  background: transparent;
+  border: 1px solid #000;
+  height: 53px;
+  line-height: 53px;
+  width: 100%!important; max-width: 116px;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #0F0F0F;
+  font-family: fontawesome;
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  transform: skew(-21deg); 
+}
+
+.wishlist-button i {
+  font-size: 16px;
+  line-height: 48px;
+  color: #000;
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+.wishlist-button:hover i.fa-solid.fa-heart{
+  display: block !important;
+}
+
+.wishlist-button:hover i.fa-regular.fa-heart{
+  display: none !important;
+}
 
 /* footer */
 footer h2 {

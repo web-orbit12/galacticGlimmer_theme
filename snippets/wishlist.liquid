@@ -1,0 +1,45 @@
+<button type="button" aria-label="Add to wishlist"  class="wishlist-button" data-product-id="{{ product.id }}">
+    <i class="fa-solid fa-heart" style="display:none;"></i>
+<i class="fa-regular fa-heart"></i>
+
+<style>
+  .wishlist-icon .active .fa-solid.fa-heart, .wishlist-icon .hover .fa-solid.fa-heart {
+    display: block !important;
+  }
+  .wishlist-icon .active .fa-regular.fa-heart, .wishlist-icon .hover .fa-regular.fa-heart {
+    display: none !important;
+  }
+</style></button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+
+
+<script>
+    // Define a function to add a product ID to the wishlist
+    function addToWishlist(productId) {
+      // Get the current wishlist from local storage (if it exists)
+      var wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+      
+      // Add the product ID to the wishlist array
+      wishlist.push(productId);
+      
+      // Update the wishlist in local storage with the new value
+      localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+  
+    // Get all the wishlist buttons
+    var wishlistButtons = document.querySelectorAll('.wishlist-button');
+    
+    // Loop through the wishlist buttons and add an event listener to each one
+    wishlistButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        // Get the product ID from the data attribute
+        var productId = button.getAttribute('data-product-id');
+        
+        // Add the product ID to the wishlist
+        addToWishlist(productId);
+        
+        // Show a success message to the customer (optional)
+        alert('Product added to wishlist!');
+      });
+    });
+  </script>
