@@ -80,6 +80,7 @@
               </svg>
             </div>
           </button>
+          {% render 'wishlist' %}
           {%- if block.settings.show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
